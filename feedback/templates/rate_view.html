@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}Candidate View{% endblock %}
+
+{% block content %}
+
+<h1>Candidate View</h1>
+<h2>{{ rate.candname }}</h2>
+<form method="POST">
+<table>
+    <tr>
+        <th>Skill</th>
+        <th>Feedbacks</th>
+        <th></th>
+    </tr>
+    {% if rate.skill1 %}
+    <tr>
+        <td>{{ rate.skill1 }}</td>
+        <td>{{ rate.feedbacks1 }}</td>
+        <td><button name="feedback" type="submit" value="feedbacks1">Feedback!</button></td>
+    </tr>
+    {% endif %}
+    {% if rate.skill2 %}
+    <tr>
+        <td>{{ rate.skill2 }}</td>
+        <td>{{ rate.feedbacks2 }}</td>
+        <td><button name="feedback" type="submit" value="feedbacks2">Feedback!</button></td>
+    </tr>
+    {% endif %}
+    {% if rate.skill3 %}
+    <tr>
+        <td>{{ rate.skill3 }}</td>
+        <td>{{ rate.feedbacks3 }}</td>
+        <td><button name="feedback" type="submit" value="feedbacks3">Feedback!</button></td>
+    </tr>
+    {% endif %}
+    {% if rate.skill4 %}
+    <tr>
+        <td>{{ rate.skill4 }}</td>
+        <td>{{ rate.feedbacks4 }}</td>
+        <td><button name="feedback" type="submit" value="feedbacks4">Feedback!</button></td>
+    </tr>
+    {% endif %}
+</table>
+</form>
+
+<p>
+    <a href="{{ url_for('rate_delete', index=rate.id) }}">Delete rate</a>
+</p>
+
+<p>
+    <a href="{{ url_for('index') }}">Return to home</a>
+</p>
+
+{% endblock %}

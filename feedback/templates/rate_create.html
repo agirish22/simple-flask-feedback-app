@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Candidate Evaluation Form{% endblock %}
+
+{% block content %}
+
+<h1>Add New Candidate</h1>
+<h2>Specify a Candidate Name and up to four Skills:</h2>
+        <form method="POST">
+            <p>
+                Name: <input type="text" name="candname">
+            </p>
+            <p>
+                Skill 1: <input type="text" name="skill1">
+            </p>
+            <p>
+                Skill 2: <input type="text" name="skill2">
+            </p>
+            <p>
+                Skill 3: <input type="text" name="skill3">
+            </p>
+            <p>
+                Skill 4: <input type="text" name="skill4">
+            </p>
+            <button type="submit">Create</button>
+        </form>
+
+{% endblock %}

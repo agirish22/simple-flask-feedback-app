@@ -1,0 +1,12 @@
+body {
+    font-family: sans-serif;
+    color: cornflowerblue;
+    background-color: floralwhite;
+}
+th, td {
+    padding: 15px;
+    text-align: center;
+  }
+  table, th, td {
+    border: 1px solid cornflowerblue;
+  }
